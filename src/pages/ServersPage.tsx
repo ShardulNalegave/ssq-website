@@ -7,7 +7,7 @@ const serverModels = [
     tagline: 'For SOHO & Small Offices',
     description: 'A tailored self-hosted server setup designed for small offices and SOHO environments. Host your photos and files locally, free from big data companies, without sacrificing convenience.',
     icon: Server,
-    image: null,
+    image: '/images/case.jpg',
     features: [
       'Self Hosted',
       'Open Source',
@@ -29,7 +29,7 @@ const serverModels = [
     tagline: 'For Families & Enthusiasts',
     description: 'A feature-rich self-hosted server for families and tech enthusiasts. Go beyond file storage with your own private media server and self-hosted AI, all without cloud subscriptions.',
     icon: Cpu,
-    image: null,
+    image: '/images/ryzen.jpg',
     features: [
       'Self Hosted',
       'Open Source',
@@ -53,7 +53,7 @@ const serverModels = [
     tagline: 'For Corporates & AI Professionals',
     description: 'Our most capable server for corporates and AI professionals. A complete private cloud: AI inference, document collaboration, music, remote access, and more, entirely in your control.',
     icon: Shield,
-    image: null,
+    image: '/images/geforce_gtx.jpg',
     features: [
       'Self Hosted',
       'Open Source',
@@ -92,7 +92,9 @@ export function ServersPage() {
   return (
     <div className="pt-16 gradient-bg noise-texture">
       {/* Hero Section */}
-      <section className="relative py-24 border-b border-border accent-gradient">
+      <section className="relative py-24 border-b border-border overflow-hidden">
+        <img src="/images/ryzen.jpg" alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.14]" />
+        <div className="absolute inset-0 accent-gradient" />
         <div className="absolute inset-0 dot-pattern opacity-50" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
@@ -138,10 +140,10 @@ export function ServersPage() {
                   <div className="lg:col-span-4">
                     <div className="aspect-[3/4] w-full sticky top-24">
                       {server.image ? (
-                        <img 
-                          src={server.image} 
+                        <img
+                          src={server.image}
                           alt={`${server.name} Server`}
-                          className="w-full h-full object-cover rounded-lg"
+                          className="w-full h-full object-cover object-center rounded-lg"
                         />
                       ) : (
                         <ServerImagePlaceholder name={server.name} />
@@ -194,7 +196,7 @@ export function ServersPage() {
                       to="/contact"
                       className="inline-flex items-center gap-2 text-sm font-medium text-brand"
                     >
-                      Configure {server.name}
+                      Get in Touch
                       <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
@@ -227,18 +229,12 @@ export function ServersPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              <div className="p-6 bg-background border border-border rounded-lg text-center">
-                <div className="text-xl font-semibold text-brand mb-2">Self Hosted</div>
-                <p className="text-xs text-muted-foreground uppercase tracking-wider">Your Data, Your Rules</p>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="aspect-[3/4] overflow-hidden rounded-lg">
+                <img src="/images/io_stats.jpg" alt="Server monitoring dashboard" className="w-full h-full object-cover object-center" />
               </div>
-              <div className="p-6 bg-background border border-border rounded-lg text-center">
-                <div className="text-xl font-semibold text-brand mb-2">Open Source</div>
-                <p className="text-xs text-muted-foreground uppercase tracking-wider">Full Transparency</p>
-              </div>
-              <div className="p-6 bg-background border border-border rounded-lg text-center">
-                <div className="text-xl font-semibold text-brand mb-2">Customizable</div>
-                <p className="text-xs text-muted-foreground uppercase tracking-wider">Built for Your Needs</p>
+              <div className="aspect-[3/4] overflow-hidden rounded-lg">
+                <img src="/images/music_album_covers.jpg" alt="Self-hosted music library" className="w-full h-full object-cover object-center" />
               </div>
             </div>
           </div>
@@ -260,7 +256,7 @@ export function ServersPage() {
               to="/contact"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium bg-brand text-white rounded-md"
             >
-              Start Your Configuration
+              Get in Touch
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

@@ -6,6 +6,8 @@ export function HomePage() {
     <div className="pt-16 gradient-bg noise-texture">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        {/* Hero background image */}
+        <img src="/images/hero_img.jpg" alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.18]" />
         {/* Grid background */}
         <div className="absolute inset-0 grid-pattern opacity-30" />
 
@@ -28,9 +30,9 @@ export function HomePage() {
           </h1>
 
           <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in-delay-2">
-            We develop tailored server setups for people &amp; enterprises to free themselves
-            from relying on big data companies, ensuring your data stays with you,
-            without compromising on convenience.
+            Your data belongs to you, not to Google, Amazon, or Microsoft.
+            We build custom self-hosted servers so you can take it back,
+            without giving up the convenience you rely on.
           </p>
 
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-delay-3">
@@ -119,9 +121,9 @@ export function HomePage() {
                 Tailored Server Setups for People &amp; Enterprises
               </h2>
               <p className="mt-6 text-muted-foreground leading-relaxed">
-                We develop tailored server setups for people and enterprises to free themselves
-                from relying on big data companies, ensuring your data stays with you,
-                without compromising on convenience or performance.
+                We pick the right hardware, configure open-source software around your needs,
+                and hand you a server that just works. No subscriptions, no third-party access,
+                no compromises on performance.
               </p>
               <div className="mt-8">
                 <Link
@@ -140,13 +142,19 @@ export function HomePage() {
                 <div className="text-2xl font-semibold text-foreground">Photos</div>
                 <p className="mt-2 text-sm text-muted-foreground">Google Photos alternative: your memories, your server</p>
               </div>
-              <div className="bg-background p-8">
-                <div className="text-2xl font-semibold text-foreground">AI</div>
-                <p className="mt-2 text-sm text-muted-foreground">Run LLMs with ease, without paying for API keys</p>
+              <div className="bg-background p-8 relative overflow-hidden">
+                <img src="/images/ollama_deepseek.jpg" alt="" className="absolute inset-0 w-full h-full object-cover object-top opacity-25" />
+                <div className="relative z-10">
+                  <div className="text-2xl font-semibold text-foreground">AI</div>
+                  <p className="mt-2 text-sm text-muted-foreground">Run LLMs with ease, without paying for API keys</p>
+                </div>
               </div>
-              <div className="bg-background p-8">
-                <div className="text-2xl font-semibold text-foreground">Media</div>
-                <p className="mt-2 text-sm text-muted-foreground">Your own Netflix: stream movies &amp; series locally</p>
+              <div className="bg-background p-8 relative overflow-hidden">
+                <img src="/images/jellyfin.jpg" alt="" className="absolute inset-0 w-full h-full object-cover object-top opacity-25" />
+                <div className="relative z-10">
+                  <div className="text-2xl font-semibold text-foreground">Media</div>
+                  <p className="mt-2 text-sm text-muted-foreground">Your own Netflix: stream movies &amp; series locally</p>
+                </div>
               </div>
               <div className="bg-background p-8">
                 <div className="text-2xl font-semibold text-foreground">Files</div>

@@ -73,8 +73,8 @@
   --color-ring: #404040;
   
   /* Accent color - subtle teal/cyan */
-  --color-brand: #0d9488;
-  --color-brand-muted: #115e59;
+  --color-brand: #0a7c6e;
+  --color-brand-muted: #0d5c51;
   
   --radius-sm: 0.375rem;
   --radius-md: 0.5rem;
@@ -167,7 +167,7 @@
 
 /* Accent gradient - very subtle */
 .accent-gradient {
-  background: linear-gradient(180deg, rgba(13, 148, 136, 0.03) 0%, transparent 50%);
+  background: linear-gradient(180deg, rgba(10, 124, 110, 0.06) 0%, rgba(29, 26, 80, 0.04) 100%);
 }
 
 /* Dot pattern background */
@@ -194,7 +194,7 @@
 .brand-line {
   width: 48px;
   height: 2px;
-  background: linear-gradient(90deg, var(--color-brand) 0%, transparent 100%);
+  background: linear-gradient(90deg, #0a7c6e 0%, rgba(79, 70, 229, 0.4) 100%);
 }
 
 /* Glow effect for cards */
@@ -206,7 +206,7 @@
   content: '';
   position: absolute;
   inset: -1px;
-  background: linear-gradient(135deg, rgba(13, 148, 136, 0.1) 0%, transparent 50%, transparent 100%);
+  background: linear-gradient(135deg, rgba(10, 124, 110, 0.1) 0%, transparent 50%, transparent 100%);
   border-radius: inherit;
   z-index: -1;
   opacity: 0;
