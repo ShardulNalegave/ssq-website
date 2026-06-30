@@ -1,5 +1,6 @@
 import { Link } from '@tanstack/react-router'
 import { Mail, Phone } from 'lucide-react'
+import { CONTACT_EMAIL } from '@/lib/constants'
 
 export function Footer() {
   return (
@@ -52,11 +53,11 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a 
-                  href="mailto:swiftsynqsolutions@gmail.com" 
+                  href={`mailto:${CONTACT_EMAIL}`}
                   className="text-sm text-muted-foreground flex items-center gap-2"
                 >
                   <Mail className="w-4 h-4" />
-                  swiftsynqsolutions@gmail.com
+                  {CONTACT_EMAIL}
                 </a>
               </li>
               <li>

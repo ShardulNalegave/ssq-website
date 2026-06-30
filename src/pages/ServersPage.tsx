@@ -1,5 +1,6 @@
 import { Link } from '@tanstack/react-router'
 import { ArrowRight, Check, Cpu, Shield, Server, ImageIcon } from 'lucide-react'
+import { ProgressiveImage } from '@/components/ProgressiveImage'
 
 const serverModels = [
   {
@@ -7,7 +8,8 @@ const serverModels = [
     tagline: 'For SOHO & Small Offices',
     description: 'A tailored self-hosted server setup designed for small offices and SOHO environments. Host your photos and files locally, free from big data companies, without sacrificing convenience.',
     icon: Server,
-    image: '/images/case.jpg',
+    image: '/images/compressed/case.jpg',
+    placeholder: '/images/placeholders/case.jpg',
     features: [
       'Self Hosted',
       'Open Source',
@@ -29,7 +31,8 @@ const serverModels = [
     tagline: 'For Families & Enthusiasts',
     description: 'A feature-rich self-hosted server for families and tech enthusiasts. Go beyond file storage with your own private media server and self-hosted AI, all without cloud subscriptions.',
     icon: Cpu,
-    image: '/images/ryzen.jpg',
+    image: '/images/compressed/ryzen.jpg',
+    placeholder: '/images/placeholders/ryzen.jpg',
     features: [
       'Self Hosted',
       'Open Source',
@@ -53,7 +56,8 @@ const serverModels = [
     tagline: 'For Corporates & AI Professionals',
     description: 'Our most capable server for corporates and AI professionals. A complete private cloud: AI inference, document collaboration, music, remote access, and more, entirely in your control.',
     icon: Shield,
-    image: '/images/geforce_gtx.jpg',
+    image: '/images/compressed/geforce_gtx.jpg',
+    placeholder: '/images/placeholders/geforce_gtx.jpg',
     features: [
       'Self Hosted',
       'Open Source',
@@ -93,7 +97,7 @@ export function ServersPage() {
     <div className="pt-16 gradient-bg noise-texture">
       {/* Hero Section */}
       <section className="relative py-24 border-b border-border overflow-hidden">
-        <img src="/images/ryzen.jpg" alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.14]" />
+        <ProgressiveImage src="/images/compressed/ryzen.jpg" placeholder="/images/placeholders/ryzen.jpg" alt="" className="absolute inset-0 w-full h-full opacity-[0.14]" />
         <div className="absolute inset-0 accent-gradient" />
         <div className="absolute inset-0 dot-pattern opacity-50" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -138,12 +142,13 @@ export function ServersPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
                   {/* Portrait Image - Takes left 4 columns */}
                   <div className="lg:col-span-4">
-                    <div className="aspect-[3/4] w-full sticky top-24">
+                    <div className="aspect-[3/4] w-full sticky top-24 rounded-lg overflow-hidden">
                       {server.image ? (
-                        <img
+                        <ProgressiveImage
                           src={server.image}
+                          placeholder={server.placeholder}
                           alt={`${server.name} Server`}
-                          className="w-full h-full object-cover object-center rounded-lg"
+                          className="w-full h-full"
                         />
                       ) : (
                         <ServerImagePlaceholder name={server.name} />
@@ -231,10 +236,10 @@ export function ServersPage() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="aspect-[3/4] overflow-hidden rounded-lg">
-                <img src="/images/io_stats.jpg" alt="Server monitoring dashboard" className="w-full h-full object-cover object-center" />
+                <ProgressiveImage src="/images/compressed/io_stats.jpg" placeholder="/images/placeholders/io_stats.jpg" alt="Server monitoring dashboard" className="w-full h-full" />
               </div>
               <div className="aspect-[3/4] overflow-hidden rounded-lg">
-                <img src="/images/music_album_covers.jpg" alt="Self-hosted music library" className="w-full h-full object-cover object-center" />
+                <ProgressiveImage src="/images/compressed/music_album_covers.jpg" placeholder="/images/placeholders/music_album_covers.jpg" alt="Self-hosted music library" className="w-full h-full" />
               </div>
             </div>
           </div>

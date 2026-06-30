@@ -1,5 +1,6 @@
 import { Link } from '@tanstack/react-router'
-import { ArrowRight, Users, Award, ImageIcon } from 'lucide-react'
+import { ArrowRight, Users, Award } from 'lucide-react'
+import { ProgressiveImage } from '@/components/ProgressiveImage'
 
 export function AboutPage() {
   return (
@@ -30,11 +31,8 @@ export function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Portrait placeholder */}
-            <div className="aspect-[3/4] max-w-sm w-full mx-auto lg:mx-0">
-              <div className="w-full h-full rounded-lg bg-[#141414] border border-[#1f1f1f] flex flex-col items-center justify-center">
-                <ImageIcon className="w-12 h-12 text-muted-foreground/30 mb-3" />
-                <span className="text-xs text-muted-foreground/40 uppercase tracking-wider">Rohit&apos;s Photo</span>
-              </div>
+            <div className="aspect-[3/4] max-w-sm w-full mx-auto lg:mx-0 overflow-hidden rounded-lg">
+              <ProgressiveImage src="/images/compressed/rohit.jpeg" placeholder="/images/placeholders/rohit.jpeg" alt="Rohit Phatak" className="w-full h-full" />
             </div>
 
             {/* Bio */}
@@ -46,9 +44,16 @@ export function AboutPage() {
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground text-balance">
                 Rohit Phatak
               </h2>
-              <p className="mt-2 text-brand font-medium">Co-Founder</p>
+              <p className="mt-2 text-brand font-medium">Founder</p>
               <p className="mt-6 text-muted-foreground leading-relaxed">
-                [Rohit&apos;s bio, to be filled in]
+                Founder of Swiftsynq, Rohit builds custom server infrastructure engineered
+                for exact workloads and real-world performance needs. He focuses on delivering
+                scalable, reliable systems tailored to what businesses actually need.
+              </p>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                With certifications as a Red Hat Certified Engineer (RHCE) and Red Hat
+                Certified System Administrator (RHCSA), he brings deep expertise in Linux
+                systems, automation, and enterprise server architecture.
               </p>
             </div>
           </div>
@@ -86,7 +91,7 @@ export function AboutPage() {
               </div>
             </div>
             <div className="aspect-[3/4] overflow-hidden rounded-lg">
-              <img src="/images/proxmox.jpg" alt="Server management dashboard" className="w-full h-full object-cover object-top" />
+              <ProgressiveImage src="/images/compressed/proxmox.jpg" placeholder="/images/placeholders/proxmox.jpg" alt="Server management dashboard" className="w-full h-full" imgClassName="object-top" />
             </div>
           </div>
         </div>
@@ -162,7 +167,7 @@ export function AboutPage() {
 
             <div className="space-y-6">
               <div className="h-52 overflow-hidden rounded-lg">
-                <img src="/images/dns.jpg" alt="WebGUI dashboard" className="w-full h-full object-cover object-top" />
+                <ProgressiveImage src="/images/compressed/dns.jpg" placeholder="/images/placeholders/dns.jpg" alt="WebGUI dashboard" className="w-full h-full" imgClassName="object-top" />
               </div>
               <div className="grid grid-cols-2 gap-6">
                 <div className="p-6 border border-border rounded-lg bg-card">

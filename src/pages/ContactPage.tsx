@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Mail, Phone, Send, CheckCircle } from 'lucide-react'
+import { CONTACT_EMAIL } from '@/lib/constants'
 
 export function ContactPage() {
   const [formState, setFormState] = useState({
@@ -29,7 +30,7 @@ export function ContactPage() {
         .filter(Boolean)
         .join('\n')
     )
-    window.location.href = `mailto:swiftsynqsolutions@gmail.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`
     setIsSubmitted(true)
   }
 
@@ -80,10 +81,10 @@ export function ContactPage() {
                   <div>
                     <h3 className="font-medium text-foreground">Email</h3>
                     <a 
-                      href="mailto:swiftsynqsolutions@gmail.com"
+                      href={`mailto:${CONTACT_EMAIL}`}
                       className="text-muted-foreground text-sm"
                     >
-                      swiftsynqsolutions@gmail.com
+                      {CONTACT_EMAIL}
                     </a>
                   </div>
                 </div>

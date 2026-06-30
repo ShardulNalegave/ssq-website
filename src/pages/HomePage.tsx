@@ -1,5 +1,6 @@
 import { Link } from '@tanstack/react-router'
 import { Shield, Lock, Server, ArrowRight, Zap, Globe, Clock } from 'lucide-react'
+import { ProgressiveImage } from '@/components/ProgressiveImage'
 
 export function HomePage() {
   return (
@@ -7,7 +8,7 @@ export function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Hero background image */}
-        <img src="/images/hero_img.jpg" alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.18]" />
+        <ProgressiveImage src="/images/compressed/hero_img.jpg" placeholder="/images/placeholders/hero_img.jpg" alt="" className="absolute inset-0 w-full h-full opacity-[0.18]" />
         {/* Grid background */}
         <div className="absolute inset-0 grid-pattern opacity-30" />
 
@@ -143,14 +144,14 @@ export function HomePage() {
                 <p className="mt-2 text-sm text-muted-foreground">Google Photos alternative: your memories, your server</p>
               </div>
               <div className="bg-background p-8 relative overflow-hidden">
-                <img src="/images/ollama_deepseek.jpg" alt="" className="absolute inset-0 w-full h-full object-cover object-top opacity-25" />
+                <ProgressiveImage src="/images/compressed/ollama_deepseek.jpg" placeholder="/images/placeholders/ollama_deepseek.jpg" alt="" className="absolute inset-0 w-full h-full opacity-25" imgClassName="object-top" />
                 <div className="relative z-10">
                   <div className="text-2xl font-semibold text-foreground">AI</div>
                   <p className="mt-2 text-sm text-muted-foreground">Run LLMs with ease, without paying for API keys</p>
                 </div>
               </div>
               <div className="bg-background p-8 relative overflow-hidden">
-                <img src="/images/jellyfin.jpg" alt="" className="absolute inset-0 w-full h-full object-cover object-top opacity-25" />
+                <ProgressiveImage src="/images/compressed/jellyfin.jpg" placeholder="/images/placeholders/jellyfin.jpg" alt="" className="absolute inset-0 w-full h-full opacity-25" imgClassName="object-top" />
                 <div className="relative z-10">
                   <div className="text-2xl font-semibold text-foreground">Media</div>
                   <p className="mt-2 text-sm text-muted-foreground">Your own Netflix: stream movies &amp; series locally</p>
